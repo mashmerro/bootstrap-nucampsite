@@ -65,7 +65,10 @@
         </nav>
 
         <div class="container"> <!--3 rows-->
-            <div class="row row-content align-items-center">    <!--1 col     | "row-content: has pre-built CSS styles padding, etc"-->
+            <div class="row row-content align-items-center">    <!--2 col     | "row-content: has pre-built CSS styles padding, etc"-->
+                <div class="col-sm-4 order-sm-last col-md-3">   <!--"order-sm-last": on small and up viewports, put this column to the last-->
+                    <h2 class="text-sm-right">Discover & Review</h2>    <!--"text-sm-right": align to the right on small and up viewports-->
+                </div>  <!--col-->
                 <div class="col">
                     <div class="media">     <!--images or videos are positioned next to the content instead of being in the middle of the content-->
                         <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
@@ -77,9 +80,9 @@
                 </div>  <!--col-->
             </div>  <!--1st row-->
 
-            <div class="row row-content align-items-center">    <!--2 col-->
+            <div class="row row-content align-items-center">    <!--2 cols-->
                 <div class="col-sm-4 col-md-3">
-                    <h2>Featured Campsites</h2>
+                    <h2 class="text-sm-left">Featured Campsites</h2>
                 </div>  <!--col-->
                 <div class="col">
                     <div class="media">
@@ -93,7 +96,10 @@
                 </div>  <!--col-->
             </div>  <!--row-->
 
-            <div class="row row-content align-items-center">   <!--1 col-->
+            <div class="row row-content align-items-center">   <!--2 cols-->
+                <div class="col-sm-4 order-sm-last col-md-3">
+                    <h2 class="text-sm-right">Our Community Partners</h2>
+                </div>  <!--col-->
                 <div class="col">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
