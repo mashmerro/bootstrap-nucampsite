@@ -1,169 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />   
 
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />     <!--Fonts and icons for navbar and footer-->
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />     <!--Icons for social links-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />  <!--Google fonts-->
+        <link rel="stylesheet" href="css/styles.css" />     <!--Your own styles-->
+        
+        <title>NuCamp: A Better Way To Camp</title>
+    </head>
 
-<head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <body>
+        <header class="jumbotron jumbotron-fluid"> <!--big gray box for special attention | "jumbotron-fluid": full width without rounded corners-->
+            <div class="container"> <!--1 row-->
+                <div class="row">   <!--3 col-->
+                    <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                        <a href="#"><img src="img/logo.png" class="img-fluid" /></a> <!--clicking the logo will go back to itself | "img-fluid" = max-width: 100%, height: auto-->
+                    </div>  <!--col-->
+                    <div class="col">
+                        <h1>NuCamp</h1>
+                        <h2>a better way to camp</h2>
+                    </div>  <!--col-->
+                    <div class="col-md-4 col-xl-2 mt-4">
+                        <a href="#reserveForm" class="text-nowrap">     <!--anchor button will point to the form ID on the bottom of the page-->
+                            <button class="btn btn-info btn-lg">Reserve Campsite</button>   <!--button is teal and large-->
+                        </a>
+                    </div>  <!--col-->
+                </div>  <!--row-->
+            </div>  <!--contianer-->
+        </header>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--navigation header | "navbar-expand-sm": extend or collapse on xs viewport | "sticky-top": fixed navbar when scrolling"-->
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt="image of nucamp logo"></a> <!--"navbar-brand": for company logo, points to itself when clicked-->
+                <!--Hamburger button on xs viewport-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">    <!--button when toggled | "data-toggle": when toggled, points to the "collapse" class | "data-target": pointing to the target ID collapse navbar-->
+                    <span class="navbar-toggler-icon"></span>   <!--'span': attribute to style by CSS | "navbar-toggler-icon": bootstrap hamburger icon-->
+                </button>
+                <!--When toggling hamburger collapse-->
+                <div class="collapse navbar-collapse" id="nucampNavbar"> <!--for button attribute when clicked-->
+                    <ul class="navbar-nav"> <!--List vertically navigation bar-->
+                        <li class="nav-item active"> <!--"nav-item active": highlights current active page-->
+                            <a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a> <!--link pointing to itself | "fa fa-home fa-lg": font aweseome font with large home icon from its library-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.htmlnop"><i class="fa fa-address-card fa-lg"></i> Contact</a>
+                        </li>
+                    </ul>
+                </div>  <!--collapse-->
+            </div>  <!--container-->
+        </nav>
 
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <title>NuCamp: A Better Way To Camp</title>
-</head>
-
-
-
-
-<body>
-
-
-    <header class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <a href="#"><img src="img/logo.png" class="img-fluid" /></a>
-                </div>
+        <div class="container"> <!--3 rows-->
+            <div class="row row-content align-items-center">    <!--1 col     | "row-content: has pre-built CSS styles padding, etc"-->
                 <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
-                </div>
-            </div>
-        </div>
+                    <div class="media">     <!--images or videos are positioned next to the content instead of being in the middle of the content-->
+                        <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                        <div class="media-body align-self-center">  <!--"media-body": corresponding with the "media" class and always inside it-->
+                            <h3>Our Campsites</h3>
+                            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>  <!--"d-none": hidden | "d-sm-block": not visible on xs but visible on small and up viewports-->
+                        </div>  <!--media-body-->
+                    </div>  <!--media-->
+                </div>  <!--col-->
+            </div>  <!--1st row-->
 
-    </header>
-
-
-
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"
-                    alt="image of nucamp logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="nucampNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
-                            About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactus.htmlnop"><i
-                                class="fa fa-address-card fa-lg"></i> Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row row-content align-items-center">
-            <div class="col">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg"
-                        alt="Breadcrumb Trail" />
-                    <div class="media-body align-self-center">
-                        <h3>Our Campsites</h3>
-                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
-                            own reviews!</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row row-content align-items-center">
+            <div class="row row-content align-items-center">    <!--2 col-->
                 <div class="col-sm-4 col-md-3">
                     <h2>Featured Campsites</h2>
-                </div>
-                <div class="col">
-                    <h3>React Lake Campground</h3>
-                    <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine
-                        React
-                        Lake is a favorite for fly fishers.</p>
-                </div>
-            </div>
-
-
-
-            <div class="row row-content">
+                </div>  <!--col-->
                 <div class="col">
                     <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png"
-                            alt="Bootstrap Outfitters" />
+                        <div class="media-body align-self-center">
+                            <h3>React Lake Campground</h3>
+                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine
+                                React Lake is a favorite for fly fishers.</p>
+                        </div>  <!--media-body-->
+                        <img class= "d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake"/>   <!--"d-flex": automatically aligns with corresponding elements | margin right by 3 | "img-thumbnail": bootstrap css with rounded white borders-->
+                    </div>  <!--media-->
+                </div>  <!--col-->
+            </div>  <!--row-->
+
+            <div class="row row-content align-items-center">   <!--1 col-->
+                <div class="col">
+                    <div class="media">
+                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
                         <div class="media-body align-self-center">
                             <h3>Bootstrap Outfitters</h3>
-                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices
-                                you can't beat.</p>
-                        </div>
-                    </div>
-                </div>
+                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        </div> <!--media-body-->
+                    </div>  <!--media-->
+                </div>  <!--col-->
+            </div>  <!--row-->
+        </div>  <!--container-->
 
-            </div>
-
-
-
-
-
-
-
-            <footer class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4 col-sm-2">
-                            <h5>Links</h5>
-                            <ul class="list-unstyled">
-                                <li class="nav-item active"><a class="nav-link" href="#"><i
-                                            class="fa fa-home fa-lg"></i>
-                                        Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="aboutus.html"><i
-                                            class="fa fa-info fa-lg"></i>
-                                        About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>
-                                        Sites</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="#"><i
-                                            class="fa fa-address-card fa-lg"></i>
-                                        Contact</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-6 col-sm-5 text-center">
-                            <h5>Social</h5>
-                            <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
-                                    class="fa fa-instagram"></i></a>
-                            <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
-                                    class="fa fa-facebook"></i></a>
-                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
-                                    class="fa fa-twitter"></i></a>
-                            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
-                                    class="fa fa-youtube"></i></a>
-                        </div>
-
-                        <div class="col-sm-4 text-center">
-                            <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i>
-                                1-206-555-1234</a><br />
-                            <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i
-                                    class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
-
-            <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
-
+        <footer class="site-footer">    <!--"site-footer": bootstrap pre-built CSS class-->
+            <div class="container"> <!--2 rows-->
+                <div class="row">   <!--3 cols-->
+                    <div class="col-4 col-sm-2 offset-1">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="#">Sites</a></li>
+                            <li><a href="contactus.html">Contact</a></li>
+                        </ul>
+                    </div>  <!--col-->
+                    <div class="col-6 col-sm-5 text-center">
+                        <h5>Social</h5>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/">  <!--"btn-social-icon": bootstrap social icon toolkit-->
+                            <i class="fa fa-instagram"></i> <!--'<i>': alt text | font-awesome icon (if the anchor tag doesn't have the bootstrap-social icon)-->
+                        </a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> 
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>  <!--col-->
+                    <div class="col-sm-4 text-center">
+                        <a role="button" class="btn btn-link" href="tel:+12065551234">  <!--'role': attribute to show for screen readers-->
+                            <i class="fa fa-phone"></i> 1-206-555-1234       <!--font-awesome icon-->
+                        </a><br />
+                        <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co">
+                            <i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                    </div>  <!--col-->
+                </div> <!--row-->
+                <div class="row row-content">   <!--1 col-->
+                    <div class="col-sm-6 mx-auto">  <!--"mx-auto": horizontally center fixed width-->
+                        <div class="card">  <!--"card": similar to a table but used for only 1 header instead of a table with multiple cols-->
+                            <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>  <!--Header with teal background and white text-->
+                            <div class="card-body"> <!--"card-header"s contents-->
+                                <form id="reserveForm">     <!--target ID for the "Reserve Campsite" button on the top header-->
+                                    <div class="form-group row">    <!--"form-group": used for rows in <form> to group together-->
+                                        <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label> <!--when clicked, will target the <select> dropdown   | "form-label": used with labels in a form-->                                           
+                                        <div class="col">                                   
+                                            <select name="numCampers" id="numCampers" class="form-control"> <!--"numCampers": target ID when label is clicked | "form-control": used in any <input>, <select> elements-->
+                                                <option>Select...</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                        </div> 
+                                    </div>  <!--row-->
+                                    <div class="form-group row">
+                                        <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                        <div class="col-sm-6">
+                                                <input type="date" id="date" name="date" placeholder="Date" class="form-control"/>
+                                        </div>  <!--col-->                                     
+                                    </div>  <!--row-->
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-primary">Search</button>   <!--blue ("btn-primary") submit type button-->
+                                        </div>  <!--col-->
+                                    </div>  <!--row-->
+                                </form>
+                            </div>  <!--card-header-->
+                        </div>  <!--card-->
+                    </div>  <!--col-->
+                </div>  <!--row-->
+            </div>  <!--container-->
+        </footer>
+        
+        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
 </html>
