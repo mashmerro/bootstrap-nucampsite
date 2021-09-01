@@ -1,0 +1,43 @@
+In aboutus.html,
+Example of a Nav Tab when toggle, hides other info
+
+<div class="col">
+    <h3>Community Partners</h3>
+    <ul class="nav nav-tabs">   <!--add a base class first to add more components ("nav")  | "nav-tabs": for tab navigation-->
+        <li class="nav-item">   <!--"nav-item": <li> class, list items in a nav-->
+            <a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap Outfitters</a> <!--"nav-link active": indicates a link, default open tab | 'href' attribute will point to ID named bootstrap   | 'role' attribute will show this is a tab on a screen reader | "data-toggle": when you toggle, it is a tab-->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Out Expeditions</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a> 
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a> 
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">  <!--"tab-pane": used for tab panes | "fade": effect when switching panes | "active": default tab-->
+            <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
+            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you
+                can't beat.</p>
+        </div>  <!--tabpanel-->
+        <div role="tabpanel" class="tab-pane fade" id="git">  <!--'role': interactive element that when activated, displays the "tabpanel" content-->  
+            <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
+            <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other
+                adventurers!</p>
+        </div>  <!--tabpanel-->
+        <div role="tabpanel" class="tab-pane fade" id="mongo">
+            <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
+            <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by
+                Mongo Fly Shop.</p>
+        </div>  <!--tabpanel-->
+        <div role="tabpanel" class="tab-pane fade" id="node">
+            <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
+            <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to
+                Node will be sure to get you
+                covered.</p>
+        </div>  tabpanel
+    </div>  <!--tab-content-->
+</div>  <!--col-->
