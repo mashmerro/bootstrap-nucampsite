@@ -22,7 +22,7 @@
             <div class="container"> <!--1 row-->
                 <div class="row">   <!--3 col-->
                     <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                        <a href="#"><img src="img/logo.png" class="img-fluid" /></a> <!--clicking the logo will go back to itself | "img-fluid" = max-width: 100%, height: auto-->
+                        <img src="img/logo.png" class="img-fluid" />
                     </div>  <!--col-->
                     <div class="col">
                         <h1>NuCamp</h1>
@@ -30,7 +30,8 @@
                     </div>  <!--col-->
                     <div class="col-md-4 col-xl-2 mt-4">
                         <a href="#reserveForm" class="text-nowrap">     <!--anchor button will point to the form ID on the bottom of the page-->
-                            <button class="btn btn-info btn-lg">Reserve Campsite</button>   <!--button is teal and large-->
+                            <button class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br />
+                            <strong>1-206-555-1234</strong>">Reserve Campsite</button>   <!--button is teal and large | 'data-toggle="tooltip': shows the 'title' attribute when hovered over  (need the jQuery at the bottom)  | 'data-placement="bottom"': will make the title show at the bottom    | 'data-html="true"': allows html inside the 'title' attribute-->
                         </a>
                     </div>  <!--col-->
                 </div>  <!--row-->
@@ -60,9 +61,52 @@
                             <a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a>
                         </li>
                     </ul>
+                    <span class="navbar-text ml-auto">  <!--'span': used for container on same line | left margin text-->
+                        <a role="button" data-toggle="modal" data-target="#loginModal"> <!--"modal": class similar to "alert" but customizable-->
+                            <i class="fa fa-sign-in"></i> Login <!--font-awesome icon-->
+                        </a>
+                    </span>
                 </div>  <!--collapse-->
             </div>  <!--container-->
         </nav>
+
+        <!--Button login modal code can go anywhere in the <body> but preferrably near the toggle for it-->
+        <div id="loginModal" class="modal fade" role="dialog">  <!--reference from ID "loginModal" with a fade effect    | 'role=dialog': for accessibility-->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content"> <!--content must have a header and body-->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login</h3>  
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>   <!--X for closing the modal-->
+                    </div>  <!--modal-header-->
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-12"> <!--Email address input-->
+                                        <label class="sr-only" for="loginEmail">Email address</label>   <!--"sr-only": visible to screen reading software-->
+                                        <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                    </div>  <!--form-group col-->
+                                    <div class="form-group col-12"> <!--Password input-->
+                                        <label class="sr-only" for="loginPassword">Password</label>
+                                        <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                    </div>  <!--form-group col-->
+                                    <div class="col">               <!--"Remember me" checkbox for login-->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe"> Remember me</label>
+                                        </div>  <!--form-check-->
+                                    </div>  <!--col-->
+                                </div>  <!--form-row-->
+                                <div class="form-row">  <!--Sign in & Cancel buttons-->
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button> <!--small gray button margin left   | when clicked, modal will dismiss-->
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>  <!--small blue button margin left by 1 (next to "Cancel")   | when clicked, will submit inputs-->
+                                </div>  <!--form-row-->
+                            </form>
+                        </div>  <!--container-fluid-->
+                    </div>  <!--modal-body-->
+                </div>  <!--modal-content-->
+            </div>  <!--modal-dialog-->
+        </div>  <!--loginModal-->
 
         <div class="container"> <!--3 rows-->
             <div class="row row-content align-items-center">    <!--2 col     | "row-content: has pre-built CSS styles padding, etc"-->
@@ -188,7 +232,15 @@
         
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>   <!--for popovers, tooltips, and drop-down menus in bootstrap-->
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!--Tooltips must be initialized by jQuery for it to work-->
+        <!--Tooltip isn't built using classes. Instead, it's built using custom data attributes-->
+        <script>
+            $(function () {     // jQuery method that activates all tooltips for this page
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
     </body>
 </html>
