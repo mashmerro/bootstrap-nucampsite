@@ -49,3 +49,11 @@ a, a:hover {
     text-decoration: none;
 }
 */
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5)    /*rgba is used to adjust color and opacity. Black is 0, 0, 0 and its opacity is 0.5 (50%) */
+}
+
+.carousel { /*Border background of carousel slides*/
+    border: solid #5637DD;
+}
