@@ -12,87 +12,17 @@
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />     <!--Fonts and icons for navbar and footer-->
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />     <!--Icons for social links-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />  <!--Google fonts-->
-        <link rel="stylesheet" href="css/styles.css" />     <!--Your own styles-->
+        <link rel="stylesheet" href="css/styles2.css" />     <!--Your own styles-->
         
         <title>NuCamp: A Better Way To Camp</title>
     </head>
 
     <body>
-        <!--Header logo-->
-        <header class="jumbotron jumbotron-fluid"> <!--big gray box for special attention | "jumbotron-fluid": full width without rounded corners-->
-            <div class="container"> <!--1 row-->
-                <div class="row">   <!--3 col-->
-                    <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                        <img src="img/logo.png" class="img-fluid" />
-                    </div>  <!--col-->
-                    <div class="col">
-                        <h1>NuCamp</h1>
-                        <h2>a better way to camp</h2>
-                    </div>  <!--col-->
-                    <div class="col-md-4 col-xl-2 mt-4">
-                        <a class="btn btn-info text-nowrap" data-toggle="modal" data-target="#reserveModal">     <!--anchor button will point to the form ID on the bottom of the page-->
-                            Reserve Campsite   <!--button is teal and large | 'data-toggle="tooltip': shows the 'title' attribute when hovered over  (need the jQuery at the bottom)  | 'data-placement="bottom"': will make the title show at the bottom    | 'data-html="true"': allows html inside the 'title' attribute-->
-                        </a> 
-                    </div>  <!--col-->
-                </div>  <!--row-->
-            </div>  <!--container-->
-        </header>
-
-        <!--Reserve Modal-->
-        <div id="reserveModal" class="modal fade" role="dialog">  <!--reference from ID "loginModal" with a fade effect    | 'role=dialog': for accessibility-->
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content"> <!--content must have a header and body-->
-                    <div class="modal-header bg-info text-white">
-                        <h3 class="modal-title">Reserve a Campsite</h3>  
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>   <!--X for closing the modal-->
-                    </div>  <!--modal-header-->
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="form-group row">    <!--"form-group": used for rows in <form> to group together-->
-                                    <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label> <!--when clicked, will target the <select> dropdown   | "form-label": used with labels in a form-->                                           
-                                    <div class="col">                                   
-                                        <select name="numCampers" id="numCampers" class="form-control"> <!--"numCampers": target ID when label is clicked | "form-control": used in any <input>, <select> elements-->
-                                            <option>Select...</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                        </select>
-                                    </div> <!--col-->
-                                </div>  <!--row-->
-                                <div class="form-group row">
-                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                    <div class="col-sm-6">
-                                            <input type="date" id="date" name="date" placeholder="Date" class="form-control"/>
-                                    </div>  <!--col-->                                     
-                                </div>  <!--row-->
-                                <div class="form-group row">
-                                    <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                    <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                        <input class="btn btn-success" type="button" name="siteType" id="siteTent" value="Tent">
-                                        <input class="btn btn-primary" type="button" name="siteRV" id="siteRV" value="RV">
-                                    </div>  <!--col-->
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col">
-                                        <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Search</button>   <!--blue ("btn-primary") submit type button-->
-                                    </div>  <!--col-->
-                                </div>  <!--row-->
-                            </form>
-                        </div>  <!--container-fluid-->
-                    </div>  <!--modal-body-->
-                </div>  <!--modal-content-->
-            </div>  <!--modal-dialog-->
-        </div>  <!--loginModal-->
 
         <!--Nav toolbar/ mmenu-->
         <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <!--navigation header | "navbar-expand-sm": extend or collapse on xs viewport | "sticky-top": fixed navbar when scrolling"-->
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt="image of nucamp logo"></a> <!--"navbar-brand": for company logo, points to itself when clicked-->
+                <a class="navbar-brand" href="#"><img src="img/nucamp-logotype.svg" height="auto" width="100" alt="image of nucamp logo"></a> <!--"navbar-brand": for company logo, points to itself when clicked-->
                 <!--Hamburger button on xs viewport-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">    <!--button when toggled | "data-toggle": when toggled, points to the "collapse" class | "data-target": pointing to the target ID collapse navbar-->
                     <span class="navbar-toggler-icon"></span>   <!--'span': attribute to style by CSS | "navbar-toggler-icon": bootstrap hamburger icon-->
@@ -163,7 +93,18 @@
         <div class="container"> <!--4 rows-->
             <!--Image slides carousel-->
             <div class="row row-content">
-                <div class="col-md-8 mx-auto">  <!--"mx-auto": centers horizontally-->
+                <div class="col-md-4 offset-1 align-self-center">
+                    <h1>
+                        <span><img src="img/logo.png"/></span>
+                        NuCamp
+                    </h1>
+                    <h3 style="margin-left: 30px">a better way to camp</h3>
+                    <a href="#reserveForm" class="text-nowrap offset-2">     <!--anchor button will point to the form ID on the bottom of the page-->
+                        <button class="btn btn-secondary btn-lg" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br />
+                        <strong>1-206-555-1234</strong>">Reserve Campsite</button>   <!--button is teal and large | 'data-toggle="tooltip': shows the 'title' attribute when hovered over  (need the jQuery at the bottom)  | 'data-placement="bottom"': will make the title show at the bottom    | 'data-html="true"': allows html inside the 'title' attribute-->
+                    </a>
+                </div> 
+                <div class="col-md-6 mx-auto">  <!--"mx-auto": centers horizontally-->
                     <div id="homeCarousel" class="carousel slide" data-ride="carousel"> <!--"carousel": base class "slide": transition effect   | 'data-ride="carousel"': start carousel upon page load-->
                         <ol class="carousel-indicators">    <!--Image slides indicator-->
                             <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>  <!--'data-target' should point to the ID of the carousel-->
@@ -174,21 +115,21 @@
                             <div class="carousel-item active">  <!--default when page loads-->
                                 <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Compound" />    <!--"d-block w-100": prevents default image alignment from taking over our images-->
                                 <div class="carousel-caption">
-                                    <h3>Breadcrumb Trail Compound</h3>
+                                    <h4>Breadcrumb Trail Compound</h4>
                                     <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p>
                                 </div>  <!--carousel-caption-->
                             </div>  <!--carousel-item-->
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
                                 <div class="carousel-caption">
-                                    <h3>React Lake Campground</h3>
+                                    <h4>React Lake Campground</h4>
                                     <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                                 </div>  <!--carousel-caption-->
                             </div>  <!--carousel-item-->
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
                                 <div class="carousel-caption">
-                                    <h3>Chrome River Campground</h3>
+                                    <h4>Chrome River Campground</h4>
                                     <p class="d-none d-sm-block">Spend a few sunny days and starry night beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
                                 </div>  <!--carousel-caption-->
                             </div>  <!--carousel item-->
@@ -205,57 +146,85 @@
                 </div>  <!--col-->
             </div>  <!--row-->
 
-            <div class="row row-content align-items-center">    <!--2 col     | "row-content: has pre-built CSS styles padding, etc"-->
-                <div class="col-sm-4 order-sm-last col-md-3">   <!--"order-sm-last": on small and up viewports, put this column to the last-->
-                    <h2 class="text-sm-right">Discover & Review</h2>    <!--"text-sm-right": align to the right on small and up viewports-->
+            <div class="row row-content align-items-center" style="background-image: linear-gradient(to right, #0098DC, #252836)">    <!--2 col     | "row-content: has pre-built CSS styles padding, etc"-->
+                <div class="col-sm-4 order-sm-last col-md-6 text-center flex justify-center">   <!--"order-sm-last": on small and up viewports, put this column to the last-->
+                    <h2>Our Campsites</h2>    <!--"text-sm-right": align to the right on small and up viewports-->
+                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>  <!--"d-none": hidden | "d-sm-block": not visible on xs but visible on small and up viewports-->
+                    <button type="button" class="btn btn-outline-primary btn-md ml-auto">Discover & Review</button>                                          
                 </div>  <!--col-->
-                <div class="col">
-                    <div class="media">     <!--images or videos are positioned next to the content instead of being in the middle of the content-->
-                        <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
-                        <div class="media-body align-self-center">  <!--"media-body": corresponding with the "media" class and always inside it-->
-                            <h3>Our Campsites</h3>
-                            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>  <!--"d-none": hidden | "d-sm-block": not visible on xs but visible on small and up viewports-->
-                        </div>  <!--media-body-->
-                    </div>  <!--media-->
+                <div class="col-md-6">
+                    <!--<img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Compound" />-->
+                    <img class="pill-shaped mx-auto d-block w-50" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
                 </div>  <!--col-->
             </div>  <!--row-->
 
-            <div class="row row-content align-items-center">    <!--2 cols-->
-                <div class="col-sm-4 col-md-3">
-                    <h2 class="text-sm-left">Featured Campsites</h2>
+            <div class="row row-content align-items-center" style="background-image: linear-gradient(to left, #FF8904, #252836">    <!--2 cols-->
+                <div class="col-sm-4 col-md-3 col-md-6 text-center flex justify-center">
+                    <h2>React Lake Campground</h2>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine
+                            React Lake is a favorite for fly fishers.</p>
+                        <button type="button" class="btn btn-outline-warning btn-md ml-auto">Featured Campsites</button> 
                 </div>  <!--col-->
-                <div class="col">
-                    <div class="media">
-                        <div class="media-body align-self-center">
-                            <h3>React Lake Campground</h3>
-                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine
-                                React Lake is a favorite for fly fishers.</p>
-                        </div>  <!--media-body-->
-                        <img class= "d-flex mr-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake"/>   <!--"d-flex": automatically aligns with corresponding elements | margin right by 3 | "img-thumbnail": bootstrap css with rounded white borders-->
-                    </div>  <!--media-->
+                <div class="col-md-6">
+                    <img class= "rounded mx-auto d-block w-50" src="img/react-lake-thumb.jpg" alt="React Lake"/>   <!--"d-flex": automatically aligns with corresponding elements | margin right by 3 | "img-thumbnail": bootstrap css with rounded white borders-->
                 </div>  <!--col-->
             </div>  <!--row-->
 
-            <div class="row row-content align-items-center">   <!--2 cols-->
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Our Community Partners</h2>
+            <div class="row row-content align-items-center" style="background-image: linear-gradient(to right, #D9296C, #252836)">   <!--2 cols-->
+                <div class="col-sm-4 order-sm-last col-md-6 text-center flex justify-center">
+                    <h2>Bootstrap Outfitters</h2>
+                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        <button type="button" class="btn btn-outline-danger btn-md ml-auto">Our Community Partners</button> 
                 </div>  <!--col-->
-                <div class="col">
-                    <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
-                        <div class="media-body align-self-center">
-                            <h3>Bootstrap Outfitters</h3>
-                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                        </div> <!--media-body-->
-                    </div>  <!--media-->
+                <div class="col-md-6">
+                    <img class="rounded mx-auto d-block w-50" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                </div>  <!--col-->
+            </div>  <!--row-->
+            
+            <!--Table form-->
+            <div class="row row-content">   <!--1 col-->
+                <div class="col-sm-6 mx-auto">  <!--"mx-auto": horizontally center fixed width-->
+                    <div class="card">  <!--"card": similar to a table but used for only 1 header instead of a table with multiple cols-->
+                        <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>  <!--Header with teal background and white text-->
+                        <div class="card-body"> <!--"card-header"s contents-->
+                            <form id="reserveForm">     <!--target ID for the "Reserve Campsite" button on the top header-->
+                                <div class="form-group row">    <!--"form-group": used for rows in <form> to group together-->
+                                    <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label> <!--when clicked, will target the <select> dropdown   | "form-label": used with labels in a form-->                                           
+                                    <div class="col">                                   
+                                        <select name="numCampers" id="numCampers" class="form-control"> <!--"numCampers": target ID when label is clicked | "form-control": used in any <input>, <select> elements-->
+                                            <option>Select...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div> 
+                                </div>  <!--row-->
+                                <div class="form-group row">
+                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                    <div class="col-sm-6">
+                                            <input type="date" id="date" name="date" placeholder="Date" class="form-control"/>
+                                    </div>  <!--col-->                                     
+                                </div>  <!--row-->
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary">Search</button>   <!--blue ("btn-primary") submit type button-->
+                                    </div>  <!--col-->
+                                </div>  <!--row-->
+                            </form>
+                        </div>  <!--card-header-->
+                    </div>  <!--card-->
                 </div>  <!--col-->
             </div>  <!--row-->
         </div>  <!--container-->
 
         <footer class="site-footer">    <!--"site-footer": bootstrap pre-built CSS class-->
-            <div class="container"> <!--2 rows-->
+            <div class="container"> <!--2 rows-->               
+                
                 <div class="row">   <!--3 cols-->
-                    <div class="col-4 col-sm-2 offset-1">
+                    <div class="col-4 col-sm-3 offset-1">
                         <h5>Links</h5>
                         <ul class="list-unstyled">
                             <li><a href="#">Home</a></li>
@@ -264,21 +233,6 @@
                             <li><a href="contactus.html">Contact</a></li>
                         </ul>
                     </div>  <!--col-->
-                    <div class="col-6 col-sm-5 text-center">
-                        <h5>Social</h5>
-                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/">  <!--"btn-social-icon": bootstrap social icon toolkit-->
-                            <i class="fa fa-instagram"></i> <!--'<i>': alt text | font-awesome icon (if the anchor tag doesn't have the bootstrap-social icon)-->
-                        </a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> 
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/">
-                            <i class="fa fa-youtube"></i>
-                        </a>
-                    </div>  <!--col-->
                     <div class="col-sm-4 text-center">
                         <a role="button" class="btn btn-link" href="tel:+12065551234">  <!--'role': attribute to show for screen readers-->
                             <i class="fa fa-phone"></i> 1-206-555-1234       <!--font-awesome icon-->
@@ -286,6 +240,20 @@
                         <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co">
                             <i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
                     </div>  <!--col-->
+                    <div class="col-6 col-sm-4 text-center">
+                        <a  href="http://instagram.com/">
+                        <i class="fa fa-instagram fa-lg fa-outline-secondary"></i> <!--'<i>': alt text | font-awesome icon (if the anchor tag doesn't have the bootstrap-social icon)-->
+                        </a>
+                        <a href="http://facebook.com/"> 
+                            <i class="fa fa-facebook fa-lg fa-outline-secondary"></i>
+                        </a>
+                        <a href="http://twitter.com/">
+                        <i class="fa fa-twitter fa-lg fa-outline-secondary"></i>
+                        </a>
+                        <a href="http://youtube.com/">
+                            <i class="fa fa-youtube fa-lg fa-outline-secondary"></i>
+                        </a>
+                    </div>  <!--col-->                    
                 </div> <!--row-->
             </div>  <!--container-->
         </footer>
