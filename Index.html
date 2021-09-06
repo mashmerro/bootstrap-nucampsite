@@ -27,7 +27,7 @@
                     </div>  <!--col-->
                     <div class="col">
                         <h1>NuCamp</h1>
-                        <h2>a better way to campdfgdfg</h2>
+                        <h2>a better way to camp</h2>
                     </div>  <!--col-->
                     <div class="col-md-4 col-xl-2 mt-4">
                         <a class="btn btn-info text-nowrap" data-toggle="modal" data-target="#reserveModal">     <!--anchor button will point to the form ID on the bottom of the page-->
@@ -201,6 +201,10 @@
                             <span class="carousel-control-next-icon"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                        <!--Play/ pause button of the carousel-->
+                        <button class="btn btn-danger btn-sm" id="carouselButton">   <!--Red small button for pause-->
+                            <i class="fa fa-pause"></i>     <!--font-awesome icon for pause button-->
+                        </button>
                     </div>  <!--homeCarousel-->
                 </div>  <!--col-->
             </div>  <!--row-->
@@ -295,10 +299,29 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>   <!--for popovers, tooltips, and drop-down menus in bootstrap-->
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+        <script>
+            $(function () {      // jQuery method for pause & play button
+                $(".carousel").carousel( { interval: 2000 } );  // sets the carousel class to an interval of 2000ms (5000ms is the default)
+                $("#carouselButton").click(function(){   // 'click': is a jQuery method on mouse clicks. Activates from ID carouselButton
+                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {  // checks if method has a child node. If it does, then carousel is currently playing...
+                        $(".carousel").carousel("pause");                               // so pause it  | '.carousel("pause")'': bootstrap carousel method
+                        $("#carouselButton").children("i").removeClass("fa-pause");     // then remove that <i> element with class "fa-pause"  (font-awesome icon pause)
+                        $("#carouselButton").children("i").addClass("fa-play");         // replace it with <i> element with class "fa-play" (font-awesome icon play)
+                        // '.children("insertElementHere")' : method that will look for a child node
+                        // '.hasClass("className")'  : class of that child node
+                    } else {    // Else, if carousel is on pause
+                        $(".carousel").carousel("cycle");   // Play the carousel again
+                        $("#carouselButton").children("i").removeClass("fa-play");  // Remove the font-icon play
+                        $("#carouselButton").children("i").addClass("fa-pause");    // Replace it with the font-icon pause
+                    }
+                });
+            });
+        </script>
+
         <!--Tooltips must be initialized by jQuery for it to work-->
         <!--Tooltip isn't built using classes. Instead, it's built using custom data attributes-->
         <script>
-            $(function () {     // jQuery method that activates all tooltips for this page
+            $(document).ready(function() {     // jQuery method that activates all tooltips for this page
                 $('[data-toggle="tooltip"]').tooltip()
             })
         </script>
