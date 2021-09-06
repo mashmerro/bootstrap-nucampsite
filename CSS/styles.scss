@@ -23,10 +23,12 @@ h2 {
 }
 
 /* This SASS style:... */
-header 
+header {
     h2 {
     color: $color-pale;
-} /*    is similar to CSS style:...
+    }
+} 
+/*    is similar to CSS style:...
 
 header h2 {
     color: $color-pale;

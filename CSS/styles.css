@@ -12,8 +12,7 @@ h2 {
   /* Points to line 2 */ }
 
 /* This SASS style:... */
-header
-h2 {
+header h2 {
   color: #CEC8FF; }
 
 /*    is similar to CSS style:...

@@ -3,16 +3,15 @@
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />    
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />   
-
-        <!-- Additional CSS must be placed after Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />     <!--Fonts and icons for navbar and footer-->
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />     <!--Icons for social links-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />  <!--Google fonts-->
-        <link rel="stylesheet" href="css/styles.css" />     <!--Your own styles-->
+        <!-- build:css css/main.css -->     <!--used along with endbuild (line 13)  | used by 'usemin' to grab css files to concatenate and minify files into a single file that we named (main.css)-->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />          <!--Bootstrap CS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />         <!--Fonts and icons for navbar and footer-->
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />         <!--Icons for social links-->
+        <link rel="stylesheet" href="css/styles.css" />                                             <!--Your own styles-->
+        <!-- endbuild -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />  <!--Google fonts from server, not local file-->
         
         <title>NuCamp: A Better Way To Camp</title>
     </head>
@@ -295,35 +294,11 @@
         </footer>
         
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <!-- build:js js/main.js -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>   <!--for popovers, tooltips, and drop-down menus in bootstrap-->
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script>
-            $(function () {      // jQuery method for pause & play button
-                $(".carousel").carousel( { interval: 2000 } );  // sets the carousel class to an interval of 2000ms (5000ms is the default)
-                $("#carouselButton").click(function(){   // 'click': is a jQuery method on mouse clicks. Activates from ID carouselButton
-                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {  // checks if method has a child node. If it does, then carousel is currently playing...
-                        $(".carousel").carousel("pause");                               // so pause it  | '.carousel("pause")'': bootstrap carousel method
-                        $("#carouselButton").children("i").removeClass("fa-pause");     // then remove that <i> element with class "fa-pause"  (font-awesome icon pause)
-                        $("#carouselButton").children("i").addClass("fa-play");         // replace it with <i> element with class "fa-play" (font-awesome icon play)
-                        // '.children("insertElementHere")' : method that will look for a child node
-                        // '.hasClass("className")'  : class of that child node
-                    } else {    // Else, if carousel is on pause
-                        $(".carousel").carousel("cycle");   // Play the carousel again
-                        $("#carouselButton").children("i").removeClass("fa-play");  // Remove the font-icon play
-                        $("#carouselButton").children("i").addClass("fa-pause");    // Replace it with the font-icon pause
-                    }
-                });
-            });
-        </script>
-
-        <!--Tooltips must be initialized by jQuery for it to work-->
-        <!--Tooltip isn't built using classes. Instead, it's built using custom data attributes-->
-        <script>
-            $(document).ready(function() {     // jQuery method that activates all tooltips for this page
-                $('[data-toggle="tooltip"]').tooltip()
-            })
-        </script>
+        <script src="js/scripts.js"></script>   
+        <!-- endbuild -->
     </body>
 </html>
