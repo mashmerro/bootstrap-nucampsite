@@ -13,4 +13,13 @@ $(function () {      // jQuery method for pause & play button
             $("#carouselButton").children("i").addClass("fa-pause");    // Replace it with the font-icon pause
         }
     });
+
+    $("#reserveButton").click(function() {
+        $("#reserveModal").modal("show");
+    });
+
+    $("#loginButton").click(function() {
+        $("#loginModal").modal("show");
+    });
+
 });

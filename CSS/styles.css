@@ -2,18 +2,22 @@
 /* CSS */
 body {
   font-family: "Open Sans", sans-serif;
-  /* Points to line 9 */ }
+  /* Points to line 9 */
+}
 
 h1, h2, h3 {
-  font-family: "Lobster", cursive; }
+  font-family: "Lobster", cursive;
+}
 
 h2 {
   color: #3046C5;
-  /* Points to line 2 */ }
+  /* Points to line 2 */
+}
 
 /* This SASS style:... */
 header h2 {
-  color: #CEC8FF; }
+  color: #CEC8FF;
+}
 
 /*    is similar to CSS style:...
 
@@ -22,22 +26,28 @@ header h2 {
 }
 */
 .site-footer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#CEC8FF), to(white));
   background-image: linear-gradient(#CEC8FF, white);
-  padding: 20px 0; }
+  padding: 20px 0;
+}
 
 .jumbotron {
   margin: 0;
   padding: 30px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#5637dd), color-stop(#3046C5), to(#60106b));
   background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b);
-  color: white; }
+  color: white;
+}
 
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 200px; }
+  min-height: 200px;
+}
 
 .navbar-dark {
-  background-color: #901CAD; }
+  background-color: #901CAD;
+}
 
 /* USED IN NAV TAV WHEN TOGGLE (extranotes.txt)
 .tab-content {
@@ -54,11 +64,13 @@ a, a:hover {
 */
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
-  /*rgba is used to adjust color and opacity. Black is 0, 0, 0 and its opacity is 0.5 (50%) */ }
+  /*rgba is used to adjust color and opacity. Black is 0, 0, 0 and its opacity is 0.5 (50%) */
+}
 
 .carousel {
   /*Border background of carousel slides*/
-  border: solid #5637dd; }
+  border: solid #5637dd;
+}
 
 #carouselButton {
   /* Will position at the bottom right of their parent container (carousel) */
@@ -66,4 +78,16 @@ a, a:hover {
   right: 0;
   bottom: 0;
   z-index: 100;
-  /* The button will appear on top of the carousel instead of being hidden underneath it */ }
+  /* The button will appear on top of the carousel instead of being hidden underneath it */
+}
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white;
+}
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
